@@ -1,0 +1,99 @@
+﻿<Window
+    x:Class="ExcelDeduplication.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ExcelDeduplication"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="엑셀 파일 중복 제거 매크로"
+    Width="800"
+    Height="300"
+    mc:Ignorable="d">
+
+    <Window.Resources>
+        <Style x:Key="ButtomStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Background" Value="#2E3347" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Margin" Value="1,1,1,1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Margin="{TemplateBinding Margin}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3E4457" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="Black">
+        <Border
+            Background="#FF1C2135"
+            BorderBrush="White"
+            BorderThickness="2"
+            CornerRadius="10">
+            <Grid Margin="5,5,5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        Grid.Column="0"
+                        Command="{Binding AddFile}"
+                        Content="파일 목록 추가"
+                        Style="{StaticResource ButtomStyle}" />
+                    <Button
+                        Grid.Column="1"
+                        Command="{Binding DeleteFile}"
+                        Content="파일 목록 제거"
+                        Style="{StaticResource ButtomStyle}" />
+
+                </Grid>
+                <Button
+                    Grid.Row="1"
+                    Command="{Binding Duplicate}"
+                    Content="중복 항목 제거"
+                    Style="{StaticResource ButtomStyle}" />
+                <ListView
+                    Grid.Row="2"
+                    Margin="0,5,0,5"
+                    Background="#FF2E3347"
+                    BorderBrush="#FFF0F2F5"
+                    Foreground="#FFF2F3F7"
+                    ItemsSource="{Binding FilePath}"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    SelectedItem="{Binding SeleteItem}">
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="BorderBrush" Value="Black" />
+                            <Setter Property="BorderThickness" Value="0,0,0,1" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

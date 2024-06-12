@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelDeduplication", "ExcelDeduplication\ExcelDeduplication.csproj", "{DD24098F-A00D-4796-9059-4FC6BAA7C51B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Debug|x64.ActiveCfg = Debug|x64
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Debug|x64.Build.0 = Debug|x64
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Release|x64.ActiveCfg = Release|x64
+		{DD24098F-A00D-4796-9059-4FC6BAA7C51B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {584467EE-D296-48A9-B5B0-0FDE3D0E3120}
+	EndGlobalSection
+EndGlobal
